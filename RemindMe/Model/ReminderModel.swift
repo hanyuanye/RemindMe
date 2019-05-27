@@ -36,4 +36,6 @@ class ReminderModel {
         return nextReminderDate?.standardString()
     }
     var payload: ReminderPayload? = nil
+    
+    var uniqueId: String = ""
 }

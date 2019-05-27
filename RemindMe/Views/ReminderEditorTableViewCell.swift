@@ -15,6 +15,9 @@ class ReminderEditorTableViewCell: UITableViewCell {
     @IBOutlet weak var nextReminderLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     
+    var index: Int = 0
+    var didDelete: ((Int) -> ())? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,10 +29,15 @@ class ReminderEditorTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(title: String?, body: String?, startDate: String?, nextReminder: String?) {
+    func configure(title: String?, body: String?, startDate: String?, nextReminder: String?, index: Int) {
         titleLabel.text = title
         bodyLabel.text = body
         startDateLabel.text = startDate
         nextReminderLabel.text = nextReminder
+        self.index = index
+    }
+    
+    @IBAction func didTapClose(_ sender: UIButton) {
+        didDelete?(index)
     }
 }

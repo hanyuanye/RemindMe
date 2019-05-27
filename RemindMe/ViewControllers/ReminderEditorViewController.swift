@@ -44,7 +44,12 @@ extension ReminderEditorViewController: UITableViewDataSource {
         cell.configure(title: reminder.payload?.title,
                        body: reminder.payload?.body,
                        startDate: reminder.start,
-                       nextReminder: reminder.nextReminder)
+                       nextReminder: reminder.nextReminder,
+                       index: indexPath.row)
+        cell.didDelete = { index in
+            self.model.deleteReminder(index: index)
+            self.reminderTableView.reloadData()
+        }
         return cell
     }
 }
