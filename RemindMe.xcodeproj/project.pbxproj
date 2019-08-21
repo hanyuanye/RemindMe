@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D4C885022A466FF0018955C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C884F22A466FF0018955C /* CoreDataManager.swift */; };
 		3DB426F72299C508005CAAB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB426F62299C508005CAAB3 /* AppDelegate.swift */; };
 		3DB426F92299C508005CAAB3 /* ReminderEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB426F82299C508005CAAB3 /* ReminderEditorViewController.swift */; };
 		3DB426FC2299C508005CAAB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB426FA2299C508005CAAB3 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		3DB427322299CD10005CAAB3 /* ReminderEditorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB427302299CD10005CAAB3 /* ReminderEditorTableViewCell.xib */; };
 		3DB427352299D029005CAAB3 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB427342299D029005CAAB3 /* Date+Extensions.swift */; };
 		3DB427372299D766005CAAB3 /* ReminderEditorModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB427362299D766005CAAB3 /* ReminderEditorModalViewController.swift */; };
+		3DFA1661229CB8A300F4BD89 /* RemindMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA165F229CB8A300F4BD89 /* RemindMe.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D4C884F22A466FF0018955C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3DB426F32299C508005CAAB3 /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB426F62299C508005CAAB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DB426F82299C508005CAAB3 /* ReminderEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditorViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		3DB427302299CD10005CAAB3 /* ReminderEditorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderEditorTableViewCell.xib; sourceTree = "<group>"; };
 		3DB427342299D029005CAAB3 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		3DB427362299D766005CAAB3 /* ReminderEditorModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditorModalViewController.swift; sourceTree = "<group>"; };
+		3DFA1660229CB8A300F4BD89 /* RemindMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindMe.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D4C884E22A466E50018955C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3DFA165F229CB8A300F4BD89 /* RemindMe.xcdatamodeld */,
+				3D4C884F22A466FF0018955C /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		3DB426EA2299C508005CAAB3 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 		3DB426F52299C508005CAAB3 /* RemindMe */ = {
 			isa = PBXGroup;
 			children = (
+				3D4C884E22A466E50018955C /* CoreData */,
 				3DB427332299D005005CAAB3 /* Extensions */,
 				3DB4272E2299CCB7005CAAB3 /* Views */,
 				3DB4272D2299CBBA005CAAB3 /* Storyboards */,
@@ -328,11 +342,13 @@
 			files = (
 				3DB426F92299C508005CAAB3 /* ReminderEditorViewController.swift in Sources */,
 				3DB426F72299C508005CAAB3 /* AppDelegate.swift in Sources */,
+				3DFA1661229CB8A300F4BD89 /* RemindMe.xcdatamodeld in Sources */,
 				3DB427352299D029005CAAB3 /* Date+Extensions.swift in Sources */,
 				3DB427372299D766005CAAB3 /* ReminderEditorModalViewController.swift in Sources */,
 				3DB427312299CD10005CAAB3 /* ReminderEditorTableViewCell.swift in Sources */,
 				3DB427292299C6AB005CAAB3 /* NotificationManager.swift in Sources */,
 				3DB427262299C558005CAAB3 /* ReminderModel.swift in Sources */,
+				3D4C885022A466FF0018955C /* CoreDataManager.swift in Sources */,
 				3DB4272B2299C8C6005CAAB3 /* ReminderEditorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,6 +672,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3DFA165F229CB8A300F4BD89 /* RemindMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3DFA1660229CB8A300F4BD89 /* RemindMe.xcdatamodel */,
+			);
+			currentVersion = 3DFA1660229CB8A300F4BD89 /* RemindMe.xcdatamodel */;
+			path = RemindMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3DB426EB2299C508005CAAB3 /* Project object */;
 }

@@ -13,7 +13,7 @@ class NotificationManager {
     static let instance = NotificationManager()
     
     func buildNotification(payload: ReminderPayload, id: String) -> UNNotificationRequest? {
-        let interval = TimeInterval(payload.timeInterval * 60 * 60)
+        let interval = TimeInterval(payload.timeInterval * 60)
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: true)
         let content = UNMutableNotificationContent()
         content.title = payload.title
